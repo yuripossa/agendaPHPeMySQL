@@ -1,0 +1,39 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="estilo\style.css"/>
+<script type="text/javascript">
+function verificar(){
+	if(document.form1.op.value.length==0){
+		alert("Ordene por algo!");
+		return false;
+	}
+	if(document.form1.ord.value.length==0){
+		alert("Escolha crescente ou decrescente");
+		return false;
+	}
+}
+</script>
+<title>Listagem</title>
+<meta charset="UTF-8">
+</head>
+<body>
+	<fieldset>
+		<legend>Listagem</legend>
+<form name="form1" method="post" action="listagem.php" onsubmit="return verificar();">
+		<label>
+			Ordenar por<br><br>
+			<input type="radio" name="op" value="codigo" />Código
+			<input type="radio" name="op" value="nome" />Nome<br><br>
+			<input type="radio" name="op" value="endereco" />Endereço
+			<input type="radio" name="op" value="sexo, nome" />Sexo e Nome<br><br>
+		</label>
+		<label>
+			Ordem<br><br>
+			<input type="radio" name="ord" value="asc">Crescente
+			<input type="radio" name="ord" value="desc">Decrescente<br><br>
+		</label>
+		<input type="submit" name="enviar" value="Enviar" onclick="verificar();"/>
+		&nbsp <input type="reset" name="limpar" value="Limpar"/> 
+	</fieldset>
+</form>
+</body></html>

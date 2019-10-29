@@ -1,0 +1,15 @@
+body {
+    background-image: url(backlogin.jpg);
+    font-family: "Verdana";
+    padding-top: 20px;
+}
+legend {
+     font-family: "Verdana";
+	 size:9;
+}
+
+p{
+	
+	text-align: justify;
+	color: blue
+}

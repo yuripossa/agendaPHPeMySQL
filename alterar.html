@@ -1,0 +1,46 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="estilo\style.css"/>
+	
+<script type="text/javascript">
+function verificar(){
+
+	if (document.form1.valor.value.length==0){
+		alert("Digite o Valor");
+		return false;
+	}
+	else if (document.form1.campo.value=="selecione"){
+		alert("Selecione o Campo");
+		return false;
+	}
+}
+</script>
+	<title>Alterar</title>
+	<meta charset="UTF-8">
+</head>
+<body>
+	<fieldset>
+		<legend>Alterar</legend>
+<form name="form1" method="post" action="alterar.php" onsubmit="return verificar();">
+			<label>
+				Valor<br><br>
+				<input type="text" name="valor" />
+			</label><br><br>
+			<label>
+				Campo<br><br>
+				<select name="campo">
+					<option value="selecione">Selecione</option> 
+					<option value="codigo">Codigo</option>
+					<option value="nome">Nome</option>
+					<option value="email">Email</option>
+					<option value="sexo">Sexo</option>
+					<option value="telefone">Telefone</option>
+					<option value="endereco">Endereço</option></select><br><br></label><br>
+					<input type="submit" name="buscar" value="Alterar" onClick="verificar();" />
+					&nbsp <input type="reset" name="limpar" value="Limpar"/> 
+	</fieldset>
+</form>
+</body>
+
+</html>
